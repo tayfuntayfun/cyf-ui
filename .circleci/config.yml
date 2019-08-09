@@ -1,0 +1,88 @@
+
+---
+version: 2.1
+
+commands:
+  s3deploy:
+    description: "Deploy to S3"
+    parameters:
+      to:
+        type: string
+      cf_distribution_id:
+        type: string
+      dir:
+        type: string
+    steps:
+      - run: |
+          aws configure set preview.cloudfront true
+      - run: |
+          aws s3 sync << parameters.dir >> s3://<< parameters.to >> \
+            --acl public-read --delete \
+            --cache-control max-age=31536000
+      - run: |
+          aws cloudfront create-invalidation \
+              --distribution-id << parameters.cf_distribution_id >> \
+              --paths /\*
+jobs:
+  build:
+    docker:
+      - image: circleci/node
+    working_directory: ~/deploy
+    environment:
+      NODE_ENV: PRODUCTION
+      REACT_APP_TRACKING_ID: UA-86160746-6
+    steps:
+      - checkout
+      - persist_to_workspace:
+          root: .
+          paths:
+            - .
+      - attach_workspace:
+          at: .
+      - run:
+          name: Set env variables
+          command: echo 'export VERSION=$(echo $CIRCLE_SHA1 | cut -c -7)' >> $BASH_ENV
+      - run:
+          name: build storybook app
+          command: yarn && SKIP_PREFLIGHT_CHECK=true yarn build-storybook -s public
+      - persist_to_workspace:
+          root: .
+          paths: .
+  deploy_production:
+    docker:
+      - image: circleci/python:3.6-jessie
+    working_directory: ~/deploy
+    environment:
+      NODE_ENV: PRODUCTION
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run:
+          name: Set env variables
+          command: echo 'export VERSION=$(echo $CIRCLE_SHA1 | cut -c -7)' >> $BASH_ENV
+      - run:
+          name: Install awscli
+          command: sudo pip install awscli
+      - s3deploy:
+          to: ui.codeyourfuture.io
+          cf_distribution_id: EDEUWC1FIFMFD
+          dir: /home/circleci/deploy/build/
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - build:
+          context: deployments
+          filters:
+            branches:
+              only:
+                - master      
+      - deploy_production:
+          requires:
+            - build        
+          context: deployments
+          filters:
+            branches:
+              only:
+                - master
