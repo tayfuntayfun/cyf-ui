@@ -10,7 +10,7 @@ storiesOf("Button", module)
   ))
   .add("with outline", () => (
     <Button
-      label="Ouline Button"
+      label="Outline Button"
       onClick={action("click")}
       style={{ background: "transparent", border: "3px solid #fecd43" }}
     />
