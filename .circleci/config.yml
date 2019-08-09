@@ -43,7 +43,7 @@ jobs:
           command: echo 'export VERSION=$(echo $CIRCLE_SHA1 | cut -c -7)' >> $BASH_ENV
       - run:
           name: build storybook app
-          command: yarn && SKIP_PREFLIGHT_CHECK=true npx storybook:build
+          command: yarn && SKIP_PREFLIGHT_CHECK=true npx storybook -s public
       - persist_to_workspace:
           root: .
           paths: .
