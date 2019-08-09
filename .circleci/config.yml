@@ -29,8 +29,7 @@ jobs:
       - image: circleci/node
     working_directory: ~/deploy
     environment:
-      NODE_ENV: PRODUCTION
-      REACT_APP_TRACKING_ID: UA-86160746-6
+      NODE_ENV: production
     steps:
       - checkout
       - persist_to_workspace:
@@ -53,7 +52,7 @@ jobs:
       - image: circleci/python:3.6-jessie
     working_directory: ~/deploy
     environment:
-      NODE_ENV: PRODUCTION
+      NODE_ENV: production
     steps:
       - checkout
       - attach_workspace:
