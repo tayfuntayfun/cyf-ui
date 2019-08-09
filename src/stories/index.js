@@ -1,1 +1,2 @@
 import "./buttonStories";
+import "./inputStories";
