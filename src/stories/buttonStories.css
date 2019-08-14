@@ -3,14 +3,14 @@
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 14px;
 
   display: flex;
   align-items: center;
   text-align: center;
   letter-spacing: 0.75px;
   text-transform: capitalize;
-  padding: 5px 15px;
+  padding: 8px 30px;
   border-radius: 5px;
   border: none;
 }
@@ -103,3 +103,53 @@ color: #f44336;
   background: #ffffff;
   box-shadow: 0px 2px 4px #F44336;
 }
+/* devider button styling */
+.btn-devider {
+  color:#ffffff;
+  background: #BDBDBD;
+}
+
+.btn-devider-outline {
+color: #9E9E9E;
+  background: #ffffff;
+  border: 2px solid #BDBDBD;
+}
+
+.btn-devider-light {
+color: #757575;
+  background: #EEEEEE;
+opacity: 0.8;
+}
+
+.btn-devider-gray-shadow {
+color: #9E9E9E;
+  background: #ffffff;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2), 0px 4px 5px rgba(0, 0, 0, 0.12),
+    0px 2px 4px rgba(0, 0, 0, 0.14);
+}
+/* rounded buttons */
+.btn-corner-5px {
+  color: #ffffff;
+  background: #2196f3;
+  border-radius: 5px;
+}
+
+.btn-corner-200px {
+  color: #ffffff;
+  background: #2196f3;
+  border-radius: 200px;
+}
+
+.btn-chip {
+  color: #ffffff;
+  background: #2196f3;
+  padding : 5px 10px;
+  border-radius: 200px;
+}
+/* ellipse button styling */
+.ellipse {
+  font-size : 50px;
+  padding : 20px 13px;
+  border-radius : 50%;
+}
+
