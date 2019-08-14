@@ -1,0 +1,36 @@
+.large-menu{
+    width : 250px;
+    margin: 0;
+    padding: 0;
+    border:2px solid #BDBDBD;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2), 0px 4px 5px rgba(0, 0, 0, 0.12),
+    0px 2px 4px rgba(0, 0, 0, 0.14);
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.listItem{
+    list-style: none;
+    width : 100%;
+    display : flex;
+    justify-content: space-between;
+}
+.icon {
+    line-height: 30px;
+    font-size: 36px;
+    padding:15px;
+}
+
+.listItem:hover {
+    background: #EEEEEE;
+}
+
+.large-menuItem { 
+    text-decoration: none;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+    color : black;
+    padding: 15px;
+}
