@@ -4,7 +4,7 @@ export default create({
   colorPrimary: "#B0BEA9",
   colorSecondary: "deepskyblue", 
   // UI
-  appBg: "#219653",
+  appBg: "white",
   appContentBg: "white",
   appBorderColor: "white",
   appBorderRadius: 4,
