@@ -1,21 +1,23 @@
 {
-  "name": "cyf-ui",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@codeyourfuture/cyf-ui",
+  "version": "4.2.0",
+  "module": "/dist/index.js",
+  "private": false,
   "dependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1",
     "@storybook/addon-actions": "^5.1.10",
     "@storybook/addon-links": "^5.1.10",
     "@storybook/addons": "^5.1.10",
-    "@storybook/react": "^5.1.10"    
+    "@storybook/react": "^5.1.10",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "babel:build": "babel src/components/index.js --out-dir dist",
     "storybook:run": "start-storybook -p 9009 -s public",
     "storybook:build": "build-storybook -o public"
   },
@@ -33,5 +35,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "yarn-deduplicate": "^1.1.1"
   }
 }
