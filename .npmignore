@@ -1,9 +1,0 @@
-#for npmignore
-.*
-	.vscode
-	src
-	coverage
-	tests
-	node_modules
-	src
-	public
