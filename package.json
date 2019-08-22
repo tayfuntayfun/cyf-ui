@@ -1,6 +1,6 @@
 {
   "name": "@codeyourfuture/cyf-ui",
-  "version": "4.2.0",
+  "version": "4.9.0",
   "module": "/dist/index.js",
   "private": false,
   "dependencies": {
@@ -17,7 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "babel:build": "babel src/components/index.js --out-dir dist",
+    "babel:build": "babel src/components --out-dir dist --source-maps inline --copy-files",
     "storybook:run": "start-storybook -p 9009 -s public",
     "storybook:build": "build-storybook -o public"
   },
