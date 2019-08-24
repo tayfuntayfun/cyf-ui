@@ -15,6 +15,8 @@ here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
 ### Deployment
 
-Once merged to master, deployed storybook is copied to S3 and is live at https://ui.codeyourfuture.io
+Once merged to master, deployed storybook is copied to S3 and is live at [![deployment site](https://img.shields.io/badge/Deployment-Site-green)](https://ui.codeyourfuture.io)
+
+### Version
 
 [![npm version](https://img.shields.io/npm/v/@codeyourfuture/cyf-ui)](https://www.npmjs.com/package/@codeyourfuture/cyf-ui)
