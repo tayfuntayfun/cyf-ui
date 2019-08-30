@@ -10,7 +10,7 @@ storiesOf("Button", module)
     <Button
       onClick={action("click")}
       label="Button"
-      className="btn btn-primary"
+      variant="btnPrimary"
     />
   ))
   .add("primary outline", () => (
@@ -18,27 +18,29 @@ storiesOf("Button", module)
       label="Button"
       onClick={action("click")}
       className="btn btn-primary-outline"
+      variant="btnPrimaryOutlined"
+
     />
   ))
   .add("primary-light", () => (
     <Button
       onClick={action("click")}
       label="Button"
-      className="btn btn-primary-light"
+      variant="btnPrimaryLight"
     />
   ))
   .add("primary with gray shadow", () => (
     <Button
       label="Button"
       onClick={action("click")}
-      className="btn btn-primary-gray-shadow"
+      variant="btnPrimaryGrayShadow"
     />
   ))
   .add("primary with shadow", () => (
     <Button
       label="Button"
       onClick={action("click")}
-      className="btn btn-primary-shadow"
+      variant="btnPrimaryShadow"
     />
   ))
   // secondary Button
@@ -46,35 +48,35 @@ storiesOf("Button", module)
     <Button
       onClick={action("click")}
       label="Button"
-      className="btn btn-secondary"
+      variant="btnSecondary"
     />
   ))
   .add("secondary outline", () => (
     <Button
       label="Button"
       onClick={action("click")}
-      className="btn btn-secondary-outline"
+      variant="btnSecondaryOutline"
     />
   ))
-  .add("secondary-light", () => (
+  .add("secondary light", () => (
     <Button
       onClick={action("click")}
       label="Button"
-      className="btn btn-secondary-light"
+      variant="btnSecondaryLight"
     />
   ))
   .add("secondary with gray shadow", () => (
     <Button
       label="Button"
       onClick={action("click")}
-      className="btn btn-secondary-gray-shadow"
+      variant="btnSecondaryGrayShadow"
     />
   ))
   .add("secondary with shadow", () => (
     <Button
       label="Button"
       onClick={action("click")}
-      className="btn btn-secondary-shadow"
+      variant="btnSecondaryShadow"
     />
   ))
   // error Button
@@ -82,118 +84,118 @@ storiesOf("Button", module)
     <Button
       onClick={action("click")}
       label="Button"
-      className="btn btn-error"
+      variant="btnError"
     />
   ))
   .add("error outline", () => (
     <Button
       label="Button"
       onClick={action("click")}
-      className="btn btn-error-outline"
+      variant="btnErrorOutline"
     />
   ))
   .add("error-light", () => (
     <Button
       onClick={action("click")}
       label="Button"
-      className="btn btn-error-light"
+      variant="btnErrorLight"
     />
   ))
   .add("error with gray shadow", () => (
     <Button
       label="Button"
       onClick={action("click")}
-      className="btn btn-error-gray-shadow"
+      variant="btnErrorGrayShadow"
     />
   ))
   .add("error with shadow", () => (
     <Button
       label="Button"
       onClick={action("click")}
-      className="btn btn-error-shadow"
+      variant="btnErrorShadow"
     />
   ))
-  // devider Button
+  // divider Button
   .add("divider", () => (
     <Button
       onClick={action("click")}
       label="Button"
-      className="btn btn-devider"
+      variant="btnDivider"
     />
   ))
-  .add("devider outline", () => (
+  .add("divider outline", () => (
     <Button
       label="Button"
       onClick={action("click")}
-      className="btn btn-devider-outline"
+      variant="btnDividerOutline"
     />
   ))
-  .add("devider-light", () => (
+  .add("divider-light", () => (
     <Button
       onClick={action("click")}
       label="Button"
-      className="btn btn-devider-light"
+      variant="btnDividerLight"
     />
   ))
-  .add("devider with gray shadow", () => (
+  .add("divider with gray shadow", () => (
     <Button
       label="Button"
       onClick={action("click")}
-      className="btn btn-devider-gray-shadow"
+      variant="btnDividerGrayShadow"
     />
   ))
-  //rounded buttons
+  // //rounded buttons
   .add("button rounded corners with 5px", () => (
     <Button
       onClick={action("click")}
       label="Button"
-      className="btn btn-corner-5px"
+      variant="btnCorner_5px"
     />
   ))
   .add("button rounded corners with 200px", () => (
     <Button
       onClick={action("click")}
       label="Button"
-      className="btn btn-corner-200px"
+      variant="btnCorner_200px"
     />
   ))
   .add("chip", () => (
-    <Button onClick={action("click")} label="Chip" className="btn btn-chip" />
+    <Button onClick={action("click")} label="Chip" variant="btnChip" />
   ))
   //ellipse Button
   .add("ellipse", () => (
     <Button
       onClick={action("click")}
       label="+"
-      className="btn btn-primary ellipse"
+      variant="btnPrimaryEllipse"
     />
   ))
   .add("ellipse outline", () => (
     <Button
       label="+"
       onClick={action("click")}
-      className="btn btn-primary-outline ellipse"
+      variant="btnPrimaryOutlineEllipse"
     />
-  ))
+   ))
   .add("ellipse-light", () => (
     <Button
       onClick={action("click")}
       label="+"
-      className="btn btn-primary-light ellipse"
+      variant="btnPrimaryLightEllipse"
     />
   ))
   .add("ellipse with gray shadow", () => (
     <Button
       label="+"
       onClick={action("click")}
-      className="btn btn-primary-gray-shadow ellipse"
+      variant="btnPrimaryGrayShadowEllipse"
     />
   ))
   .add("ellipse with shadow", () => (
     <Button
       label="+"
       onClick={action("click")}
-      className="btn btn-primary-shadow ellipse"
+      variant="btnPrimaryShadowEllipse"
     />
   ))
   //secondary with vector
@@ -201,7 +203,7 @@ storiesOf("Button", module)
     <Button
       label="+ Button"
       onClick={action("click")}
-      className="btn btn-secondary"
+      variant="btnSecondaryVector"
     />
   ))
-  //
+  
