@@ -1,11 +1,13 @@
 import React from "react";
 import "./large-menu.css";
+
 const Menu = props => {
   const { menuItems } = props;
+
   return (
     <ul className="large-menu">
       {menuItems.map(menuItem => (
-        <li className="listItem">
+        <li key={menuItem.navItem} className="listItem">
           <a className="large-menuItem" href={menuItem.link}>
             {menuItem.navItem}
           </a>
