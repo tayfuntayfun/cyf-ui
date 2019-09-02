@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { action } from "@storybook/addon-actions";
+//import { action } from "@storybook/addon-actions";
 import "./menuStories.css";
 import SmallMenu from "../components/SmallMenu/SmallMenu";
 import LargeMenu from "../components/LargeMenu/LargeMenu";
