@@ -4,18 +4,21 @@ import styled from "styled-components";
 
 //Here starts our specific input styles:
 
-/* Inactive input styling */
 const inactiveInput = {
   name: "inactiveInput",
   border: "1px solid #e8e8e8"
 };
 
-//Focused Input styling
 const focusedInput = {
   name: "focusedInput",
   border: "1px solid #bdbdbd"
 };
-//The input  styled component
+
+const activeInput = {
+  name: "activeInput",
+  border: "2px solid #03a9f4"
+};
+//The input styled component
 const Input = styled.input`
   box-sizing: border-box;
   background: #fafafa;
@@ -23,7 +26,7 @@ const Input = styled.input`
 `;
 
 //Add all input types here
-const inputTypes = [inactiveInput, focusedInput];
+const inputTypes = [inactiveInput, focusedInput, activeInput];
 
 //Return the wanted input styles according the type props that send to the component
 const getSelectedInputStyle = variant =>

@@ -9,10 +9,10 @@ storiesOf("Input", module)
   ))
   .add("focused input", () => (
     <Input onChange={action("change")} variant="focusedInput" />
+  ))
+  .add("active input", () => (
+    <Input onChange={action("change")} variant="activeInput" />
+  ))
+  .add("error input", () => (
+    <Input onChange={action("change")} variant="errorInput" />
   ));
-// .add("active input", () => (
-//   <Input onChange={action("change")} className="inpt active-input" />
-// ))
-// .add("error input", () => (
-//   <Input onChange={action("change")} className="inpt error-input" />
-//));
