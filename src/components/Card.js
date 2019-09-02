@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "./Button";
-import "../stories/buttonStories.css";
+
 const Card = props => {
   return (
     <article className={props.className} style={props.style}>
@@ -28,4 +28,5 @@ const Card = props => {
     </article>
   );
 };
+
 export default Card;

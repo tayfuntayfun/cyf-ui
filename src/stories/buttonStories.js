@@ -1,17 +1,11 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import "./buttonStories.css";
 import Button from "../components/Button";
 
 storiesOf("Button", module)
-  // primary Button
   .add("primary", () => (
-    <Button
-      onClick={action("click")}
-      label="Button"
-      variant="btnPrimary"
-    />
+    <Button onClick={action("click")} label="Button" variant="btnPrimary" />
   ))
   .add("primary outline", () => (
     <Button
@@ -19,7 +13,6 @@ storiesOf("Button", module)
       onClick={action("click")}
       className="btn btn-primary-outline"
       variant="btnPrimaryOutlined"
-
     />
   ))
   .add("primary-light", () => (
@@ -43,13 +36,8 @@ storiesOf("Button", module)
       variant="btnPrimaryShadow"
     />
   ))
-  // secondary Button
   .add("secondary", () => (
-    <Button
-      onClick={action("click")}
-      label="Button"
-      variant="btnSecondary"
-    />
+    <Button onClick={action("click")} label="Button" variant="btnSecondary" />
   ))
   .add("secondary outline", () => (
     <Button
@@ -79,13 +67,8 @@ storiesOf("Button", module)
       variant="btnSecondaryShadow"
     />
   ))
-  // error Button
   .add("error", () => (
-    <Button
-      onClick={action("click")}
-      label="Button"
-      variant="btnError"
-    />
+    <Button onClick={action("click")} label="Button" variant="btnError" />
   ))
   .add("error outline", () => (
     <Button
@@ -95,11 +78,7 @@ storiesOf("Button", module)
     />
   ))
   .add("error-light", () => (
-    <Button
-      onClick={action("click")}
-      label="Button"
-      variant="btnErrorLight"
-    />
+    <Button onClick={action("click")} label="Button" variant="btnErrorLight" />
   ))
   .add("error with gray shadow", () => (
     <Button
@@ -109,19 +88,10 @@ storiesOf("Button", module)
     />
   ))
   .add("error with shadow", () => (
-    <Button
-      label="Button"
-      onClick={action("click")}
-      variant="btnErrorShadow"
-    />
+    <Button label="Button" onClick={action("click")} variant="btnErrorShadow" />
   ))
-  // divider Button
   .add("divider", () => (
-    <Button
-      onClick={action("click")}
-      label="Button"
-      variant="btnDivider"
-    />
+    <Button onClick={action("click")} label="Button" variant="btnDivider" />
   ))
   .add("divider outline", () => (
     <Button
@@ -144,13 +114,8 @@ storiesOf("Button", module)
       variant="btnDividerGrayShadow"
     />
   ))
-  // //rounded buttons
   .add("button rounded corners with 5px", () => (
-    <Button
-      onClick={action("click")}
-      label="Button"
-      variant="btnCorner_5px"
-    />
+    <Button onClick={action("click")} label="Button" variant="btnCorner_5px" />
   ))
   .add("button rounded corners with 200px", () => (
     <Button
@@ -162,13 +127,8 @@ storiesOf("Button", module)
   .add("chip", () => (
     <Button onClick={action("click")} label="Chip" variant="btnChip" />
   ))
-  //ellipse Button
   .add("ellipse", () => (
-    <Button
-      onClick={action("click")}
-      label="+"
-      variant="btnPrimaryEllipse"
-    />
+    <Button onClick={action("click")} label="+" variant="btnPrimaryEllipse" />
   ))
   .add("ellipse outline", () => (
     <Button
@@ -176,7 +136,7 @@ storiesOf("Button", module)
       onClick={action("click")}
       variant="btnPrimaryOutlineEllipse"
     />
-   ))
+  ))
   .add("ellipse-light", () => (
     <Button
       onClick={action("click")}
@@ -198,12 +158,10 @@ storiesOf("Button", module)
       variant="btnPrimaryShadowEllipse"
     />
   ))
-  //secondary with vector
   .add("secondary with vector", () => (
     <Button
       label="+ Button"
       onClick={action("click")}
       variant="btnSecondaryVector"
     />
-  ))
-  
+  ));

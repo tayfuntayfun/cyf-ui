@@ -1,4 +1,5 @@
 import React from "react";
+
 const Input = props => (
   <input
     onChange={props.onChange}
@@ -6,4 +7,5 @@ const Input = props => (
     style={props.style}
   />
 );
+
 export default Input;

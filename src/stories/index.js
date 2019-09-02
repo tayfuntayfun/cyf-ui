@@ -1,4 +1,4 @@
 import "./buttonStories";
 import "./inputStories";
-import "./menuStories"
+import "./menuStories";
 import "./cardStories";
