@@ -1,8 +1,10 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import "./menuStories.css";
+
 import SmallMenu from "../components/SmallMenu/SmallMenu";
 import LargeMenu from "../components/LargeMenu/LargeMenu";
+
+import "./menuStories.css";
 
 storiesOf("Menu", module)
   .add("large dropdown menu", () => (

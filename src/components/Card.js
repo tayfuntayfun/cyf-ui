@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "./Button";
 
 const Card = props => {
   return (
@@ -13,7 +12,7 @@ const Card = props => {
         <h1>{props.title}</h1>
         <p>{props.body}</p>
         <div className={props.buttonsContainerClass}>
-          <Button
+          {/* <Button
             label="Button"
             className="btn-primary-outline"
             style={{ width: "30%" }}
@@ -22,7 +21,7 @@ const Card = props => {
             label="Button"
             className="btn-primary-outline"
             style={{ width: "30%" }}
-          />
+          /> */}
         </div>
       </div>
     </article>
