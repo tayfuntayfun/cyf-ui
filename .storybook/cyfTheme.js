@@ -1,8 +1,9 @@
 import { create } from "@storybook/theming";
+
 export default create({
   base: "light",
   colorPrimary: "#B0BEA9",
-  colorSecondary: "deepskyblue", 
+  colorSecondary: "deepskyblue",
   // UI
   appBg: "white",
   appContentBg: "white",
@@ -12,7 +13,7 @@ export default create({
   fontBase: '"Open Sans", sans-serif',
   fontCode: "monospace",
   // Text colors
-  textColor: "black", 
+  textColor: "black",
   textInverseColor: "black",
   // Toolbar default and active colors
   barTextColor: "white",
@@ -26,5 +27,5 @@ export default create({
   brandTitle: "Code Your Future Storybook",
   brandUrl: "https://example.com",
   brandImage:
-    "https://application-process.staging.codeyourfuture.io/static/media/logo-cyf.fbcea877.png"
+    "https://application-process.staging.codeyourfuture.io/static/media/logo-cyf.fbcea877.png",
 });

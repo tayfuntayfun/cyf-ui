@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+
 //The button styled component
 
 //Here starts our specific input styles:

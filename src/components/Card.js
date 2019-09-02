@@ -1,5 +1,5 @@
 import React from "react";
-//import Button from "./Button";
+
 const Card = props => {
   return (
     <article className={props.className} style={props.style}>
@@ -27,4 +27,5 @@ const Card = props => {
     </article>
   );
 };
+
 export default Card;
