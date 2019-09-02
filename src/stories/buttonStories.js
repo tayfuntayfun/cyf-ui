@@ -16,7 +16,6 @@ storiesOf("Button", module)
     <Button
       label="Button"
       onClick={action("click")}
-      className="btn btn-primary-outline"
       variant="btnPrimaryOutlined"
 
     />
