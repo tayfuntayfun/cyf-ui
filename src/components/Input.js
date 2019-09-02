@@ -18,6 +18,10 @@ const activeInput = {
   name: "activeInput",
   border: "2px solid #03a9f4"
 };
+const errorInput = {
+  name: "errorInput",
+  border: "1px solid #f44336"
+};
 //The input styled component
 const Input = styled.input`
   box-sizing: border-box;
@@ -26,7 +30,7 @@ const Input = styled.input`
 `;
 
 //Add all input types here
-const inputTypes = [inactiveInput, focusedInput, activeInput];
+const inputTypes = [inactiveInput, focusedInput, activeInput, errorInput];
 
 //Return the wanted input styles according the type props that send to the component
 const getSelectedInputStyle = variant =>
