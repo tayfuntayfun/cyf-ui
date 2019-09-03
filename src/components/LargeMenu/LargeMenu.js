@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import "./large-menu.css";
 
 const LargeMenuWrapper = styled.ul`
   width: 250px;
