@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import "./small-menu.css";
 
 const SmallMenuWrapper = styled.ul`
   width: 150px;
