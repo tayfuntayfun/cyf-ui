@@ -2,11 +2,10 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import Button from "../components/Button";
+import ButtonDocumentation from "../Documentation/Button";
 
 storiesOf("Button", module)
-  .add("primary", () => (
-    <Button onClick={action("click")} label="Button" variant="btnPrimary" />
-  ))
+  .add("primary", () => <ButtonDocumentation />)
   .add("primary outline", () => (
     <Button
       label="Button"
@@ -113,19 +112,6 @@ storiesOf("Button", module)
       variant="btnDividerGrayShadow"
     />
   ))
-  .add("button rounded corners with 5px", () => (
-    <Button onClick={action("click")} label="Button" variant="btnCorner_5px" />
-  ))
-  .add("button rounded corners with 200px", () => (
-    <Button
-      onClick={action("click")}
-      label="Button"
-      variant="btnCorner_200px"
-    />
-  ))
-  .add("chip", () => (
-    <Button onClick={action("click")} label="Chip" variant="btnChip" />
-  ))
   .add("ellipse", () => (
     <Button onClick={action("click")} label="+" variant="btnPrimaryEllipse" />
   ))
@@ -156,6 +142,19 @@ storiesOf("Button", module)
       onClick={action("click")}
       variant="btnPrimaryShadowEllipse"
     />
+  ))
+  .add("button rounded corners with 5px", () => (
+    <Button onClick={action("click")} label="Button" variant="btnCorner_5px" />
+  ))
+  .add("button rounded corners with 200px", () => (
+    <Button
+      onClick={action("click")}
+      label="Button"
+      variant="btnCorner_200px"
+    />
+  ))
+  .add("chip", () => (
+    <Button onClick={action("click")} label="Chip" variant="btnChip" />
   ))
   .add("secondary with vector", () => (
     <Button
