@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../";
-import { render } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
 
 describe("Button", () => {
   test("matches snapshots", () => {
@@ -13,5 +13,20 @@ describe("Button", () => {
     );
 
     expect(container.firstChild).toMatchSnapshot();
+  });
+
+  test("onClick is called upon user click", () => {
+    const mockOnClick = jest.fn(() => null);
+
+    const { getByText } = render(
+      <Button label="Button" onClick={mockOnClick} variant="btnPrimaryOutlined">
+        Click Me
+      </Button>
+    );
+
+    const button = getByText("Click Me");
+    fireEvent.click(button);
+
+    expect(mockOnClick).toHaveBeenCalled();
   });
 });
