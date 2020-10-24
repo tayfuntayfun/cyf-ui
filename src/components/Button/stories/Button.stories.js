@@ -1,6 +1,7 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React from "react";
 import { action } from "@storybook/addon-actions";
-import Button from "../";
+import Button from "..";
 
 export default {
   title: "Components/Button",

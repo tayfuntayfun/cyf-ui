@@ -61,8 +61,11 @@ jobs:
           name: Set env variables
           command: echo 'export VERSION=$(echo $CIRCLE_SHA1 | cut -c -7)' >> $BASH_ENV
       - run:
-          name: build storybook app
-          command: yarn && yarn storybook:build
+          name: Install dependencies
+          command: yarn install
+      - run:
+          name: Build storybook app
+          command: yarn build-storybook
       - persist_to_workspace:
           root: .
           paths: .
