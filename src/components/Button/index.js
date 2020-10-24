@@ -235,12 +235,9 @@ const StyledButton = styled.button`
   border-radius: ${props => props.variant.borderRadius || "5px"};
 `;
 
-const Button = props => (
-  <StyledButton
-    onClick={props.onClick}
-    variant={getSelectedButtonStyle(props.variant)}
-  >
-    <span>{props.label && <span>{props.label}</span>}</span>
+const Button = ({ variant, children, onClick }) => (
+  <StyledButton onClick={onClick} variant={getSelectedButtonStyle(variant)}>
+    {children}
   </StyledButton>
 );
 

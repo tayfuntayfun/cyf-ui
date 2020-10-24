@@ -2,7 +2,7 @@ import { create } from "@storybook/theming";
 
 export default create({
   base: "light",
-  colorPrimary: "#B0BEA9",
+  colorPrimary: "#ed4343",
   colorSecondary: "deepskyblue",
   // UI
   appBg: "white",
@@ -18,14 +18,14 @@ export default create({
   // Toolbar default and active colors
   barTextColor: "white",
   barSelectedColor: "white",
-  barBg: "#92AA83",
+  barBg: "#ed4343",
   // Form colors
   inputBg: "white",
   inputBorder: "black",
   inputTextColor: "black",
   inputBorderRadius: 4,
   brandTitle: "Code Your Future Storybook",
-  brandUrl: "https://example.com",
+  brandUrl: "https://codeyourfuture.io/",
   brandImage:
-    "https://application-process.staging.codeyourfuture.io/static/media/logo-cyf.fbcea877.png",
+    "https://codeyourfuture.io/wp-content/uploads/2019/03/cyf_brand.png",
 });
