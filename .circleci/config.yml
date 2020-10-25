@@ -25,10 +25,8 @@ commands:
 jobs:
   test:
     docker:
-      - image: circleci/node
+      - image: cimg/node:14.13.1-browsers
     working_directory: ~/repo
-    environment:
-      NODE_ENV: development
     steps:
       - checkout
       - run:
@@ -45,10 +43,8 @@ jobs:
           command: yarn test
   build:
     docker:
-      - image: circleci/node
+      - image: cimg/node:14.13.1-browsers
     working_directory: ~/deploy
-    environment:
-      NODE_ENV: production
     steps:
       - checkout
       - persist_to_workspace:
