@@ -1,7 +1,9 @@
-import React from "react";
-import styled from "styled-components";
+/* eslint-disable camelcase */
 
-//Here starts our specific button styles:
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
+// Here starts our specific button styles:
 
 /* primary buttons styling */
 const btnPrimary = {
@@ -178,7 +180,7 @@ const btnSecondaryVector = {
   ...btnSecondary,
   name: "btnSecondaryVector",
 };
-//Add all buttons different  objects here
+// Add all buttons different  objects here
 const buttonTypes = [
   btnPrimary,
   btnPrimaryOutlined,
@@ -210,38 +212,41 @@ const buttonTypes = [
   btnSecondaryVector,
 ];
 
-//Return the wanted button styles according the type props that send to the component
-const getSelectedButtonStyle = variant =>
-  buttonTypes.find(btn => btn.name === variant);
+// Return the wanted button styles according the type props that send to the component
+const getSelectedButtonStyle = (variant) =>
+  buttonTypes.find((btn) => btn.name === variant);
 
-//The button styled component
+// The button styled component
 const StyledButton = styled.button`
   font-style: normal;
   font-weight: 600;
-  font-size: ${props => props.variant.fontSize || "14px"};
+  font-size: ${(props) => props.variant.fontSize || "14px"};
   font-family: "Open Sans", sans-serif;
   line-height: 14px;
-  color: ${props => props.variant.color};
+  color: ${(props) => props.variant.color};
   display: flex;
   align-items: center;
   text-align: center;
   letter-spacing: 0.75px;
   text-transform: capitalize;
-  padding: ${props => props.variant.padding || "8px 32px"};
-  box-shadow: ${props => props.variant.boxShadow || "none"};
-  border: ${props => props.variant.border || "none"};
-  background: ${props => props.variant.background};
-  opacity: ${props => props.variant.opacity || "initial"};
-  border-radius: ${props => props.variant.borderRadius || "5px"};
+  padding: ${(props) => props.variant.padding || "8px 32px"};
+  box-shadow: ${(props) => props.variant.boxShadow || "none"};
+  border: ${(props) => props.variant.border || "none"};
+  background: ${(props) => props.variant.background};
+  opacity: ${(props) => props.variant.opacity || "initial"};
+  border-radius: ${(props) => props.variant.borderRadius || "5px"};
 `;
 
-const Button = props => (
-  <StyledButton
-    onClick={props.onClick}
-    variant={getSelectedButtonStyle(props.variant)}
-  >
-    <span>{props.label && <span>{props.label}</span>}</span>
+const Button = ({ variant, children, onClick }) => (
+  <StyledButton onClick={onClick} variant={getSelectedButtonStyle(variant)}>
+    {children}
   </StyledButton>
 );
+
+Button.propTypes = {
+  children: PropTypes.any.isRequired,
+  variant: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+};
 
 export default Button;

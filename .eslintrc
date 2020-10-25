@@ -1,14 +1,19 @@
 {
   "parser": "babel-eslint",
   "env": {
-    "node": true
+    "browser": true,
+    "jest": true,
+    "es6": true
   },
   "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:import/errors"
+    "airbnb",
+    "prettier",
+    "prettier/react"
   ],
+  "plugins": ["react",  "prettier"],
   "rules": {
-    "react/prop-types": 0
+    "react/jsx-filename-extension": "off",
+    "react/forbid-prop-types": "off",
+    "import/prefer-default-export": "off"
   }
 }
